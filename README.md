@@ -22,7 +22,7 @@ You&rsquo;re allowed to have as many pages and subpages as you want, with as muc
 * Harmful, malicious, or privacy-endangering code will **not** be permitted.
 * Content that does not adhere to the [ESO-RP forum rules](http://eso-rp.com/forum/m/9324623/viewthread/27951247) (in summary: &ldquo;Don&rsquo;t be a dick.&rdquo;) will not be permitted.
 
-If you&rsquo;ve found anyone breaking these guidelines, please message me here or [through Enjin](https://enjin.com/dashboard/messages/compose?type=user&id=11652181) with the URL of the content in question and I&rsquo;ll look at it ASAP.
+If you&rsquo;ve found any pages that break these guidelines, please message me here or [through Enjin](https://enjin.com/dashboard/messages/compose?type=user&id=11652181) with the URL of the content in question and I&rsquo;ll look into it ASAP.
 
  **I am not responsible for the quality of any content hosted on this repository.** While anything that doesn&rsquo;t meet the guidelines should be reported (and I severely reprimanded for allowing said content past my filter in the first place), content that is incomplete, non-working, or otherwise lacking in quality is the responsibility of each individual user.
 
