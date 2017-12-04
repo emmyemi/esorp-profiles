@@ -30,6 +30,10 @@ a:hover{
   border-bottom-color:currentColor;
   background-color:rgba(128,128,128,.1);
 }
+a[href="#"]{
+  opacity:.5;
+  pointer-events:none;
+}
 
 .b{
   font-weight:bold!important;
