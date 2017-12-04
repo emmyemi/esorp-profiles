@@ -28,7 +28,9 @@ If you&rsquo;ve found any pages that break these guidelines, or have found your 
 
 ### Disclaimer
 
-**I am not responsible for the quality of any content hosted on this repository.** While anything that doesn&rsquo;t meet the guidelines should be reported (and I severely reprimanded for allowing said content past my filter in the first place), content that is incomplete, non-working, or otherwise lacking in quality is the responsibility of each individual user. If there&rsquo;s no contact information on the page itself, you can always find basic info in the appropriate `userinfo.md` file, included inside every subdirectory.
+**I am not responsible for the quality of any content hosted on this repository.** While anything that doesn&rsquo;t meet the guidelines should be reported (and I severely reprimanded for allowing said content past my filter in the first place), content that is incomplete, non-working, or otherwise lacking in quality is the responsibility of each individual user.
+
+If there&rsquo;s no contact information provided on a given page, you can always find basic info in the appropriate `userinfo.md` file included inside every subdirectory. This file will always include at least an Enjin profile link, but may also specify a user's GitHub (if relevant), and any other method of contact provided.
 
 Finally, if you have any questions or concerns, feel free to contact me through [Enjin](http://eso-rp.com/profile/emmy), [Telegram](https://t.me/emmyemi), or Discord (`Emmy#1567`).
 
