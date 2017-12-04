@@ -6,10 +6,10 @@ This is an experiment: a place for members of ESO-RP to have (almost) complete f
 
 There are two ways to get your own space:
 
-1. Link to GitHub
+1. **Link to GitHub**
    1. Message me here or [through Enjin][0] with the Enjin/GitHub username you want to link. I&rsquo;ll verify your identity by sending a random code to the account.
    1. Respond to your original DM with either a screenshot or the code in plaintext; you&rsquo;ll be given your own folder in the repo, and you can make pull requests directly.
-1. Enjin only
+1. **Enjin only**
    1. [Message me on Enjin][0] with a link to download your files, and I&rsquo;ll set everything up for you&mdash;no GitHub required. If you later want to get a GitHub account approved, refer to method 1.
 
 Your custom URL will be as follows: `http://profile.eso-rp.com/YourEnjinProfileID`. For the moment, this is non-negotiable, as it makes keeping up with who&rsquo;s who much easier. This comes with a slight upside&mdash;those with custom Enjin IDs (e.g. `https://enjin.com/emmy`) will get a cleaner-looking profile link. Contact me if your Enjin ID ever changes and I&rsquo;ll get you squared away.
