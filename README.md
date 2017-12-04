@@ -2,7 +2,7 @@
 
 ### About
 
-This is a place for members of ESO-RP to have ~~almost~~ complete freedom to represent their characters, guilds, etc., without the limitations of BBCode. And yes, it&rsquo;s free.
+This is an experiment; a place for members of ESO-RP to have (almost) complete freedom to represent their characters, guilds, etc., without the limitations of BBCode. And yes, it&rsquo;s free.
 
 There are two ways to get your own space:
 
@@ -26,6 +26,10 @@ You&rsquo;re allowed to have as many pages and subpages as you want, with as muc
 
 If you&rsquo;ve found any pages that break these guidelines, please message me here or [through Enjin](https://enjin.com/dashboard/messages/compose?type=user&id=11652181) with the URL of the content in question and I&rsquo;ll look into it ASAP.
 
- **I am not responsible for the quality of any content hosted on this repository.** While anything that doesn&rsquo;t meet the guidelines should be reported (and I severely reprimanded for allowing said content past my filter in the first place), content that is incomplete, non-working, or otherwise lacking in quality is the responsibility of each individual user.
+### Final Words
+
+**I am not responsible for the quality of any content hosted on this repository.** While anything that doesn&rsquo;t meet the guidelines should be reported (and I severely reprimanded for allowing said content past my filter in the first place), content that is incomplete, non-working, or otherwise lacking in quality is the responsibility of each individual user.
+
+This repo, and subsequently all content contained within, is provided under the [**Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)**](https://creativecommons.org/licenses/by-nc/4.0/) license. Do not submit content for review if you disapprove of this license, or if you don&rsquo;t have the legal right to do so.
 
 Finally, if you have any questions or concerns, feel free to contact me through [Enjin](http://eso-rp.com/profile/emmy), [Telegram](https://t.me/emmyemi), or Discord (`Emmy#1567`).
