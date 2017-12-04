@@ -81,6 +81,8 @@ section.no_img .image{
   align-content:center;
   flex:1;
   box-shadow:0 0 10px rgba(0,0,0,.3) inset;
+  background-color:#1a1a1a;
+  margin:.5px 0;
 }
 .img_container{
   width:87.5%;

@@ -97,13 +97,16 @@ h1{
 
 
 .des::before{
-  background-image:url(i/des.jpg);
+  background-image:url(i/des2.jpg);
 }
 .taylor::before{
   background-image:url(i/taylor.jpg);
 }
 .az::before{
   background-image:url(i/az.jpg);
+}
+.fari::before{
+  background-image:url(i/fari.jpg);
 }
 
 @media (max-width:799px){
