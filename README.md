@@ -28,6 +28,8 @@ You&rsquo;re allowed to have as many pages and subpages as you want, with as muc
 * Content that does not adhere to the [ESO-RP forum rules](http://eso-rp.com/forum/m/9324623/viewthread/27951247) (in summary: &ldquo;Don&rsquo;t be a dick.&rdquo;) will not be permitted.
 * Do not attempt to edit the contents of any folder other than your own. While honest mistakes may happen, any edits made without the owner&rsquo;s permission will be denied.
 
+I&rsquo;ll be manually reviewing everything before allowing it to be pushed to the site, so if you break one of these rules&mdash;accidentally or otherwise&mdash;I&rsquo;ll let you know what&rsquo;s wrong and how to proceed.
+
 If you&rsquo;ve found any pages that break these guidelines, or have found your content posted here wrongfully, please [open an issue](https://github.com/emmyemi/profiles/issues/new) or send a message pointing me to the content in question, and I&rsquo;ll look into it ASAP.
 
 ### Disclaimer
