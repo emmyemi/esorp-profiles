@@ -24,7 +24,7 @@ You&rsquo;re allowed to have as many pages and subpages as you want, with as muc
 * Harmful, malicious, asbusive, or privacy-endangering code will **not** be permitted. This extends to external links.
 * Content that does not adhere to the [ESO-RP forum rules](http://eso-rp.com/forum/m/9324623/viewthread/27951247) (in summary: &ldquo;Don&rsquo;t be a dick.&rdquo;) will not be permitted.
 
-If you&rsquo;ve found any pages that break these guidelines, or have found your content posted here wrongfully, please message me here or [through Enjin][0] with the URL of the content in question and I&rsquo;ll look into it ASAP.
+If you&rsquo;ve found any pages that break these guidelines, or have found your content posted here wrongfully, please message me here or [through Enjin][0], or [open an issue](https://github.com/emmyemi/profiles/issues/new), with the URL of the content in question and I&rsquo;ll look into it ASAP.
 
 ### Disclaimer
 
