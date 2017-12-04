@@ -4,6 +4,9 @@ const nsfw = document.createElement('DIV');
 nsfw.setAttribute('id','nsfw_overlay');
 nsfw.innerHTML =`
 <style>
+  body{
+    overflow:hidden!important;
+  }
   div#nsfw_overlay{
     width:100%;
     height:100%;
@@ -33,6 +36,6 @@ nsfw.innerHTML =`
 <h1>This page may contain explicit content.</h1>
 <p>If you understand and consent to viewing such content, <a href="#" onclick="closeOverlay()">click here to continue</a>.</p>
 `;
-var closeOverlay = () =>{ document.getElementById('nsfw_overlay').style.display = 'none'; },
+var closeOverlay = () =>{ document.getElementById('nsfw_overlay').outerHTML = ''; },
     showOverlay = () =>{ document.body.appendChild(nsfw); };
 showOverlay();
