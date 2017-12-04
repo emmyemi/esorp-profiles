@@ -1,4 +1,4 @@
-// Import this somewhere in the BODY of your page
+// Insert or embed (link) this script somewhere in the BODY of your page
 
 const nsfw = document.createElement('DIV');
 nsfw.setAttribute('id','nsfw_overlay');
