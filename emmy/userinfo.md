@@ -1,4 +1,7 @@
-`profile.eso-rp.com/emmy` is owned by&hellip;
+*`profile.eso-rp.com/emmy`* is owned by&hellip;
 
-* [Emmy (Enjin)](http://eso-rp.com/profile/emmy)
-* [emmyemi (GitHub)](https://github.com/emmyemi)
+Service   | Username / Link
+--------- | ---------------
+Enjin:    | [Emmy](http://eso-rp.com/profile/emmy)
+GitHub:   | [emmyemi](https://github.com/emmyemi)
+Telegram: | [emmyemi](https://t.me/emmyemi)
