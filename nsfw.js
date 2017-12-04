@@ -1,4 +1,4 @@
-// Simple script to generate a clickthrough NSFW warning
+// Generates a page-blocking NSFW warning
 // Insert or embed (src="/nsfw.js") this script somewhere in the BODY of your page
 const nsfw = document.createElement('DIV');
 nsfw.setAttribute('id','nsfw_overlay');
@@ -44,6 +44,6 @@ nsfw.innerHTML =`
 <div class="h1">This page may contain explicit content.</div>
 <div class="p">If you understand and consent to viewing such content, <span class="a" onclick="closeOverlay()">click here to continue</span>.</div>
 `;
-var closeOverlay = () =>{ document.getElementById('nsfw_overlay').outerHTML = ''; },
-    showOverlay = () =>{ document.body.appendChild(nsfw); };
+var showOverlay = () =>{ document.body.appendChild(nsfw); },
+    closeOverlay = () =>{ document.getElementById('nsfw_overlay').outerHTML = ''; };
 showOverlay();
