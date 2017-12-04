@@ -26,10 +26,8 @@ You&rsquo;re allowed to have as many pages and subpages as you want, with as muc
 
 If you&rsquo;ve found any pages that break these guidelines, please message me here or [through Enjin](https://enjin.com/dashboard/messages/compose?type=user&id=11652181) with the URL of the content in question and I&rsquo;ll look into it ASAP.
 
-### Final Words
+### Disclaimer
 
 **I am not responsible for the quality of any content hosted on this repository.** While anything that doesn&rsquo;t meet the guidelines should be reported (and I severely reprimanded for allowing said content past my filter in the first place), content that is incomplete, non-working, or otherwise lacking in quality is the responsibility of each individual user.
-
-This repo, and subsequently all content contained within, is provided under the [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/) license. Do not submit content for review if you disapprove of this license, or if you don&rsquo;t have the legal right to do so.
 
 Finally, if you have any questions or concerns, feel free to contact me through [Enjin](http://eso-rp.com/profile/emmy), [Telegram](https://t.me/emmyemi), or Discord (`Emmy#1567`).
