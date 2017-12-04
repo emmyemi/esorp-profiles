@@ -1,4 +1,4 @@
-*`profile.eso-rp.com/emmy`* is owned by&hellip;
+*`profile.eso-rp.com/emmy` is owned by&hellip;*
 
 Service   | Username / Link
 --------- | ---------------
