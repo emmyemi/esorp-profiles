@@ -4,12 +4,13 @@
 
 This is an experiment: a place for members of ESO-RP to have (almost) complete freedom to represent their characters, guilds, etc., without the limitations of BBCode. And yes, it&rsquo;s free.
 
-There are two ways to get your own space:
+There are three ways to get your own space:
 
 1. [Message me on Enjin][0] with your GitHub username. I&rsquo;ll verify your identity by sending a random code to your GitHub account; respond via Enjin with either a screenshot or the code in plaintext, and you&rsquo;ll be given your own folder in the repo. (This is also acceptable the other way around.)
 2. [Message me on Enjin][0] with a link to download your files, and I&rsquo;ll set everything up for you.
+3. [Contact me](#disclaimer) with relevant information for a custom design quote!
 
-Your custom URL will be as follows: `https://profile.eso-rp.com/YourEnjinID`. For the moment, this is non-negotiable, as it makes keeping up with who&rsquo;s who much easier.
+Your custom URL will be as follows: `http://profile.eso-rp.com/YourEnjinID`. For the moment, this is non-negotiable, as it makes keeping up with who&rsquo;s who much easier.
 
 If you&rsquo;ve got all your files in place but don&rsquo;t see any live changes just yet, don&rsquo;t panic. It may take up to a few hours for everything to be updated properly, so make sure you&rsquo;re satisfied with what you have before pushing it.
 
