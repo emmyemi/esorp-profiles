@@ -97,3 +97,8 @@ a[href="#"]{
   color:#ddd;
   font-weight:300;
 }
+
+#p_v,
+#asymia{
+  display:none;
+}
