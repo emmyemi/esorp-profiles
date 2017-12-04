@@ -21,10 +21,10 @@ You&rsquo;re allowed to have as many pages and subpages as you want, with as muc
 * You must possess **all** necessary rights to any content (code, media, writing, etc.) you submit.
 * All artwork, even if signed and/or watermarked, must be provided with accurate, visible credit given to the artist. (Unless you *are* the artist. Then you can do what you want.)
 * Any and all NSFW content must come with a clear and visible warning. If you aren&rsquo;t quite sure how to do this, I&rsquo;ve [provided a script to generate one on a page-by-page basis](https://github.com/emmyemi/emmyemi.github.io/blob/master/nsfw.js). If you don&rsquo;t include one, I&rsquo;ll take the liberty of injecting mine for you. This policy extends to external links.
-* Harmful, malicious, asbusive, or privacy-endangering content will **not** be permitted. This policy extends to external links.
+* Harmful, malicious, abusive, or privacy-endangering content will **not** be permitted. This policy extends to external links.
 * Content that does not adhere to the [ESO-RP forum rules](http://eso-rp.com/forum/m/9324623/viewthread/27951247) (in summary: &ldquo;Don&rsquo;t be a dick.&rdquo;) will not be permitted.
 
-If you&rsquo;ve found any pages that break these guidelines, or have found your content posted here wrongfully, please message me here or [through Enjin][0] or [open an issue](https://github.com/emmyemi/profiles/issues/new), point me to the content in question, and I&rsquo;ll look into it ASAP.
+If you&rsquo;ve found any pages that break these guidelines, or have found your content posted here wrongfully, please [open an issue](https://github.com/emmyemi/profiles/issues/new) or send me a message pointing me to the content in question, and I&rsquo;ll look into it ASAP.
 
 ### Disclaimer
 
