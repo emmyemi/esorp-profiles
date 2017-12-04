@@ -23,15 +23,18 @@ You&rsquo;re allowed to have as many pages and subpages as you want, with as muc
 * Any and all NSFW content must come with a clear and visible warning. If you aren&rsquo;t quite sure how to do this, I&rsquo;ve [provided a script to generate one on a page-by-page basis](https://github.com/emmyemi/emmyemi.github.io/blob/master/nsfw.js). If you don&rsquo;t include one, I&rsquo;ll take the liberty of injecting mine for you. This policy extends to external links.
 * Harmful, malicious, abusive, or privacy-endangering content will **not** be permitted. This policy extends to external links.
 * Content that does not adhere to the [ESO-RP forum rules](http://eso-rp.com/forum/m/9324623/viewthread/27951247) (in summary: &ldquo;Don&rsquo;t be a dick.&rdquo;) will not be permitted.
+* Do not attempt to edit the contents of any folder other than your own. While honest mistakes may happen, any edits made without the owner&rsquo;s permission will be denied.
 
 If you&rsquo;ve found any pages that break these guidelines, or have found your content posted here wrongfully, please [open an issue](https://github.com/emmyemi/profiles/issues/new) or send me a message pointing me to the content in question, and I&rsquo;ll look into it ASAP.
 
 ### Disclaimer
 
-**I am not responsible for the quality of any content hosted on this repository.** While anything that doesn&rsquo;t meet the guidelines should be reported (and I severely reprimanded for allowing said content past my filter in the first place), content that is incomplete, non-working, or otherwise lacking in quality is the responsibility of each individual user.
+**I am not responsible for the *quality* of any content hosted on this repository.** While anything that doesn&rsquo;t meet the guidelines should be reported (and I severely reprimanded for allowing said content past my filter in the first place), content that is incomplete, non-working, or otherwise lacking in quality is the responsibility of each individual user.
 
 If there&rsquo;s no contact information provided on a given page, you can always find basic info in the appropriate `userinfo.md` file included inside every subdirectory. This file will always include at least an Enjin profile link, but may also specify a user's GitHub (if relevant), and any other method of contact provided.
 
-Finally, if you have any questions or concerns, feel free to contact me through [Enjin](http://eso-rp.com/profile/emmy), [Telegram](https://t.me/emmyemi), or Discord (`Emmy#1567`).
+Please note that all content on this repo can be read&mdash;as well as forked, edited, and mirrored&mdash;by anyone. While I&rsquo;ll be making sure everything on `profile.eso-rp.com` adheres to the guidelines above, I can&rsquo;t promise your content won't end up on a mirror repo or another website. Such is the nature of the internet. If you take issue with this, it&rsquo;s best that you refrain from submitting your content.
+
+Finally, if you have any questions or concerns, feel free to contact me here or through [Enjin](http://eso-rp.com/profile/emmy), [Telegram](https://t.me/emmyemi), or Discord (`Emmy#1567`).
 
 [0]: https://enjin.com/dashboard/messages/compose?type=user&id=11652181 "Compose an Enjin message"
