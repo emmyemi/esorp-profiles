@@ -21,7 +21,7 @@ If you&rsquo;ve got all your files in place but don&rsquo;t see any live changes
 
 You&rsquo;re allowed to have as many pages and subpages as you want, with as much or as little media as you want, as many custom scripts and stylesheets as you want&hellip; Basically, you can do just about anything. Go wild and let your creativity flow. I only ask that you follow a few basic guidelines:
 
-* Keep pages mostly related to ESO and ESO roleplay. If you want a site for your own personal, non-roleplay reasons, you can learn how to set one up using GitHub Pages [here](https://pages.github.com/).
+* Keep pages mostly related to ESO and ESO roleplay. If you want a site for your own personal, non-roleplay reasons, there are any number of avenues you could take to set one up&mdash;including [GitHub Pages](https://pages.github.com/).
 * You must possess **all** necessary rights to any content (code, media, writing, etc.) you submit.
 * All artwork, even if signed and/or watermarked, must be provided with accurate, visible credit given to the artist. (Unless you *are* the artist. Then you can do what you want.)
 * Any and all NSFW content must come with a clear and visible warning. If you aren&rsquo;t quite sure how to do this, I&rsquo;ve [provided a script to generate one on a page-by-page basis](https://github.com/emmyemi/emmyemi.github.io/blob/master/nsfw.js). If you don&rsquo;t include one, I&rsquo;ll take the liberty of injecting mine for you. This policy extends to external links.
