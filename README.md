@@ -7,9 +7,9 @@ This is an experiment: a place for members of ESO-RP to have (almost) complete f
 There are two ways to get your own space:
 
 1. **Link to GitHub**
-   1. Message me here or [through Enjin][0] with the Enjin/GitHub username you want to link. I&rsquo;ll verify your identity by sending a random code to the account.
-   1. Respond to your original DM with either a screenshot or the code in plaintext; you&rsquo;ll be given your own folder in the repo, and you can make pull requests directly.
-   1. Your Enjin ID and GitHub username will be added to the `users.json` file in the root directory. This is what I&rsquo;ll refer to when someone issues a pull request. If the ID matches the GitHub account, then assuming your code passes review (see [Guidelines](#guidelines)), I&rsquo;ll approve it.
+   1. Message me here or [through Enjin][0] with the Enjin/GitHub username you want to link. I&rsquo;ll send a random code to the account.
+   1. Verify your identity by responding to your original DM with either a screenshot or the code in plaintext. You&rsquo;ll then be given your own folder in the repo, and your Enjin ID and GitHub username will be added to the `users.json` file in the root directory.
+   1. When you issue a pull request, so long as the ID matches the GitHub account, (and assuming your code passes review&mdash;see [Guidelines](#guidelines)), I&rsquo;ll approve it.
 1. **Enjin only**
    1. [Message me on Enjin][0] with a link to download your files, and I&rsquo;ll set everything up for you&mdash;no GitHub required. If you later want to get a GitHub account approved, refer to method 1.
 
@@ -39,7 +39,7 @@ If you&rsquo;ve found any pages that break these guidelines, or have found your 
 
 If there&rsquo;s no contact information provided on a given page, you can always find basic info in the appropriate `userinfo.md` file included inside every subdirectory. This file will always include at least an Enjin profile link, but may also specify a user's GitHub (if relevant), and any other method of contact provided.
 
-Please note that all content on this repository can be read&mdash;as well as downloaded, forked, edited, and mirrored&mdash;by anyone. While I&rsquo;ll be making sure everything on `profile.eso-rp.com` adheres to the guidelines above, I can&rsquo;t promise your content won't end up on a mirror repo or another website. Such is the nature of the internet. If you take issue with this, it&rsquo;s best that you refrain from submitting your content.
+Please note that all content on this repository can be read&mdash;as well as downloaded, forked, edited, and mirrored&mdash;by *anyone*. While I&rsquo;ll be making sure everything on `profile.eso-rp.com` adheres to the guidelines above, I can&rsquo;t promise your content won't end up on a mirror repo or another website. Such is the nature of the internet. If you take issue with this, it&rsquo;s best that you refrain from submitting your content.
 
 Finally, if you have any questions or concerns, feel free to reach out to me here on GitHub, through [Enjin](http://eso-rp.com/profile/emmy), on [Telegram](https://t.me/emmyemi), or on Discord (`Emmy#1567`).
 
