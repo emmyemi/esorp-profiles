@@ -6,3 +6,4 @@ Enjin:    | [Emmy](http://eso-rp.com/profile/emmy)
 GitHub:   | [emmyemi](https://github.com/emmyemi)
 Telegram: | [emmyemi](https://t.me/emmyemi)
 Discord:  | Emmy#1567
+ESO:      | @emmy-emi
