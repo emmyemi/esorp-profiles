@@ -9,6 +9,7 @@ There are two ways to get your own space:
 1. **Link to GitHub**
    1. Message me here or [through Enjin][0] with the Enjin/GitHub username you want to link. I&rsquo;ll verify your identity by sending a random code to the account.
    1. Respond to your original DM with either a screenshot or the code in plaintext; you&rsquo;ll be given your own folder in the repo, and you can make pull requests directly.
+   1. Your Enjin ID and GitHub username will be added to the `users.json` file in the root directory. This is what I&rsquo;ll refer to when someone issues a pull request. If the ID matches the GitHub account, then assuming your code passes review (see [Guidelines](#guidelines)), I&rsquo;ll approve it.
 1. **Enjin only**
    1. [Message me on Enjin][0] with a link to download your files, and I&rsquo;ll set everything up for you&mdash;no GitHub required. If you later want to get a GitHub account approved, refer to method 1.
 
