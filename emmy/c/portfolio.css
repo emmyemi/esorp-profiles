@@ -17,11 +17,18 @@ p:first-of-type{
 }
 #h_bg{
   position:absolute;
-  height:500px;
+  height:100%;
   width:100%;
-  background-color:#fff;
-  filter:blur(6px) saturate(0);
+  filter:blur(8px) saturate(0);
+  background-color:#000;
   z-index:-1;
+}
+#h.sm{
+  height:300px;
+}
+#h.big{
+  height:700px;
+  transition:height .1s ease-out;
 }
 #h_separator{
   width:100%;
@@ -29,7 +36,7 @@ p:first-of-type{
 }
 #h_bg,
 #h_separator{
-  background-position:top;
+  background-position:bottom;
   background-size:cover;
   background-attachment:fixed;
 }
@@ -76,6 +83,9 @@ section.no_img .info{
 section.no_img .image{
   display:none;
 }
+section.wide_img{
+  flex-direction:column!important;
+}
 .image{
   padding:1em 0;
   align-content:center;
@@ -108,6 +118,9 @@ section.no_img .image{
 }
 .circle .img_container{
   border-radius:50%;
+}
+.wide_img .img_container{
+  max-height:300px;
 }
 .image img{
   width:100%;
@@ -299,7 +312,7 @@ section.no_img .image{
 .skill_array li{
   padding:.5em;
   list-style:none;
-  flex:0 calc(33% - 1.5em); /* dunno how i got this number but it works? */
+  flex:0 calc(33% - 1.5em);
   display:inline-block;
   background-color:rgba(0,0,0,.15);
   border:1px solid rgba(0,0,0,.15);
@@ -402,7 +415,7 @@ section.no_img .image{
   #h_title h2{
     display:none;
   }
-  .image{
+  section:not(.wide_img) .image{
     display:none;
   }
   .info{
