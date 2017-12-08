@@ -397,11 +397,12 @@ section.wide_img{
 /* mobile */
 @media (max-width:749px){
   #h{
-    height:250px;
+    height:250px!important;
   }
   #h_bg,
   #h_separator{
     background-attachment:scroll;
+    background-position:bottom!important;
   }
   #h_bg{
     height:246px;
@@ -419,7 +420,7 @@ section.wide_img{
     display:none;
   }
   .info{
-    padding:1em;
+    padding:1em!important;
   }
   .section_title{
     margin-bottom:.75em;
