@@ -132,6 +132,7 @@ section.wide_img{
 }
 .image img{
   margin-bottom:-.25em;
+  width:100%;
 }
 .image.diamond img{
   transform:rotate(-45deg) scale(1.45,1.45);
