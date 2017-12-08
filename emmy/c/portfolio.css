@@ -47,7 +47,7 @@ p:first-of-type{
   text-align:center;
   background-color:rgba(10,10,10,.85);
   padding:0 0 .4em;
-  box-shadow:0 5px 5px rgba(0,0,0,.15);
+  box-shadow:0 0 10px rgba(0,0,0,.5);
 }
 #h_title h1{
   font-size:2.5em;
