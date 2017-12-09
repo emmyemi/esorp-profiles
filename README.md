@@ -15,7 +15,7 @@ There are two ways to get your own space:
 
 Your custom URL will be as follows: `http://profile.eso-rp.com/YourEnjinProfileID`. For the moment, this is non-negotiable, as it makes keeping up with who&rsquo;s who much easier. This comes with a slight upside&mdash;those with custom Enjin IDs (e.g. `https://enjin.com/profile/emmy`) will get a cleaner-looking link. Contact me if your Enjin ID ever changes and I&rsquo;ll get you squared away.
 
-If you&rsquo;ve got all your files in place but don&rsquo;t see any live changes immediately, don&rsquo;t [toss the computer](https://media.giphy.com/media/kHU8W94VS329y/giphy.gif) just yet. It may take up to a few hours for everything to be updated properly, so make sure you&rsquo;ve tested what you have before sending it out.
+If you&rsquo;ve got all your files in place but don&rsquo;t see any live changes immediately, don&rsquo;t [toss the computer](https://media.giphy.com/media/kHU8W94VS329y/giphy.gif) just yet. It may take up to a couple hours for everything to be updated properly, so make sure you&rsquo;ve tested what you have before sending it out.
  
 ### Guidelines
 
