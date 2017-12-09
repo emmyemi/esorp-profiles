@@ -22,4 +22,4 @@ pageLoad = () => {
   initParallax();
 };
 // * * *
-window.addEventListener('load', pageLoad);
+window.addEventListener('DOMContentLoaded', pageLoad);
