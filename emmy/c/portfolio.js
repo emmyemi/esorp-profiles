@@ -14,7 +14,7 @@ initParallax = () => {
   }
 },
 // * * *
-pageLoad = () => {
+pageSetup = () => {
   if (document.querySelector('#h.big')) {
     adjustHead();
     window.addEventListener('resize', adjustHead);
@@ -22,4 +22,4 @@ pageLoad = () => {
   initParallax();
 };
 // * * *
-window.addEventListener('load', pageLoad);
+window.addEventListener('DOMContentLoaded', pageSetup);
