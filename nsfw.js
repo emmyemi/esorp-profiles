@@ -7,4 +7,4 @@ nsfw.innerHTML = `<style>body{overflow:hidden!important;}div#nsfw_overlay{paddin
 <div class="nsfw_p">If you understand and consent to viewing such content, <span class="nsfw_a" onclick="closeOverlay()">click here to continue</span>.</div>`;
 var showOverlay = () =>{ document.body.appendChild(nsfw); },
     closeOverlay = () =>{ nsfw.outerHTML = ''; };
-window.addEventListener('load', showOverlay);
+window.addEventListener('DOMContentLoaded', showOverlay);
