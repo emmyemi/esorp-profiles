@@ -1,6 +1,5 @@
 var scrollElem,
-adjustHead = () => {
-  var h = document.querySelector('#h.big');
+adjustHead = (h) => {
   h.style.height = `${window.innerHeight - 1}px`;
 },
 doParallax = () => {
@@ -16,7 +15,7 @@ initParallax = () => {
 // * * *
 pageLoad = () => {
   if (document.querySelector('#h.big')) {
-    adjustHead();
+    adjustHead(document.querySelector('#h.big'));
     window.addEventListener('resize', adjustHead);
   }
   initParallax();

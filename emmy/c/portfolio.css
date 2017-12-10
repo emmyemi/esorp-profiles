@@ -19,7 +19,7 @@ p:first-of-type{
   position:absolute;
   height:100%;
   width:100%;
-  filter:blur(8px) saturate(0);
+  filter:blur(6px) saturate(0);
   background-color:#000;
   z-index:-1;
 }
