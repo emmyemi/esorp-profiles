@@ -66,7 +66,7 @@ p:first-of-type{
   display:none;
 }
 
-#main{
+article{
   background-color:#1a1a1a;
 }
 
@@ -404,7 +404,7 @@ section.wide_img{
 
 /* mobile */
 @media (max-width:749px){
-  #h{
+  #h:not(.no_banner){
     height:250px!important;
   }
   #h_bg,
@@ -468,5 +468,8 @@ section.wide_img{
   }
   .level:before{
     font-size:.75em;
+  }
+  #f .not_banner{
+    display:none;
   }
 }
