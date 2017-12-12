@@ -7,9 +7,9 @@ This is an experiment: a place for members of ESO-RP to have (almost) complete f
 There are two ways to get your own space:
 
 1. **Link to GitHub**
-   1. Message me here or [through Enjin][0] with the Enjin/GitHub username you want to link. I&rsquo;ll send a random code to the account.
-   1. Verify your identity by responding to your original DM with either a screenshot or the code in plaintext. You&rsquo;ll then be given your own folder in the repo, and your Enjin ID and GitHub username will be added to the `users.json` file in the root directory.
-   1. When you issue a pull request, so long as the ID matches the GitHub account (and assuming your code passes review&mdash;see [Guidelines](#guidelines)), I&rsquo;ll approve it.
+   1. Message me [through Enjin][0] with the GitHub username you want to link; that's all!
+      * You&rsquo;ll then be given your own folder in the repo, and your Enjin ID and GitHub username will be added to the `users.json` file in the root directory.
+      * When you issue a pull request, so long as the ID matches the GitHub account (and assuming your code passes review&mdash;see [Guidelines](#guidelines)), I&rsquo;ll approve it.
 1. **Enjin only**
    1. [Message me on Enjin][0] with a link to download your files, and I&rsquo;ll set everything up for you&mdash;no GitHub required. If you later want to get a GitHub account approved, refer to method 1.
 
