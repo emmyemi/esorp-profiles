@@ -19,7 +19,7 @@ p:first-of-type{
   position:absolute;
   height:100%;
   width:100%;
-  filter:blur(6px) saturate(0);
+  filter:blur(20px) saturate(3);
   background-color:#000;
   z-index:-1;
 }
@@ -98,6 +98,7 @@ section.wide_img{
   width:87.5%;
   margin:auto;
   border:0 solid rgba(255,255,255,.5);
+  text-align:center;
 }
 .diamond .img_container,
 .circle .img_container{
