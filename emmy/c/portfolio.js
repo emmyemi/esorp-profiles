@@ -7,10 +7,8 @@ doParallax = () => {
   scrollElem[1].style.backgroundPosition = `center calc(100% - ${window.scrollY * .2}px)`;
 },
 initParallax = () => {
-  if (document.querySelector('#h:not(.no_banner)')) {
-    scrollElem = document.querySelectorAll('#h_bg, #h_separator');
-    window.addEventListener('scroll', doParallax);
-  }
+  scrollElem = document.querySelectorAll('#h_bg, #h_separator');
+  window.addEventListener('scroll', doParallax);
 },
 // * * *
 pageLoad = () => {
@@ -18,7 +16,9 @@ pageLoad = () => {
     adjustHead(document.querySelector('#h.big'));
     window.addEventListener('resize', adjustHead);
   }
-  initParallax();
+  if (!document.querySelector('#h.no_banner')) {
+    initParallax();
+  }
 };
 // * * *
 window.addEventListener('DOMContentLoaded', pageLoad);
