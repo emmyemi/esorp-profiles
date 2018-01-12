@@ -25,7 +25,7 @@ insFooter = () => {
   footer.setAttribute('id', 'f');
   footer.innerHTML =`
     Artwork: ${artCredit}<br />
-    Website &copy; Emmy
+    Website &copy; 2017&ndash;${new Date().getFullYear()} Emmy
   `;
   document.body.appendChild(footer);
 }
