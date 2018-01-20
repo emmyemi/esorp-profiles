@@ -43,7 +43,7 @@ setTheme = (theme = document.head.getAttribute('data-theme')) => {
               document.body.insertBefore(script, document.querySelector('#h'));
             },
             check = new XMLHttpRequest();
-        check.addEventListener('load', insScript);
+        check.addEventListener('load', function(){ if(check.status == 200){ insScript(); } });
         check.open('GET', scriptSrc);
         check.send();
     };
