@@ -1,6 +1,7 @@
 var scrollElem,
     isDOMContentLoaded,
-adjustHead = (h) => {
+adjustHead = () => {
+  let h = document.querySelector('#h.big');
   h.style.height = `${window.innerHeight - 1}px`;
 },
 doParallax = () => {
@@ -56,7 +57,7 @@ setTheme = () => {
 // * * *
 pageLoad = () => {
   if (document.querySelector('#h.big')) {
-    adjustHead(document.querySelector('#h.big'));
+    adjustHead();
     window.addEventListener('resize', adjustHead);
   }
   if (!document.querySelector('#h.no_banner')) {

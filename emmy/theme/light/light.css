@@ -1,0 +1,83 @@
+body{
+  background-color:#dedede;
+  color:#000;
+}
+h1, h2{
+  text-shadow:none;
+}
+a, #f a{
+  color:#000;
+}
+#f{
+  color:#333;
+  border-color:#fff;
+}
+#h{
+  margin-bottom:-.5px;
+}
+#h_title{
+  background-color:#dfdfdf;
+  border-color:#fff;
+}
+article{
+  background-color:#ddd;
+}
+.image{
+  background-color:#ccc;
+}
+.info{
+  background-color:#ddd;
+  border-color:#fff;
+}
+.stat_desc{
+  border-color:#fff;
+}
+.stat_desc, .stat_chart tr:nth-child(2n+1){
+  background-color:rgba(255,255,255,.25);
+}
+.stat_chart table{
+  background-color:rgba(255,255,255,.1);
+}
+.stat_chart{
+  border-color:#fff;
+}
+.bar{
+  background-color:rgba(255,255,255,.2);
+  border:1px solid rgba(0,0,0,.3);
+}
+.pros_cons h4{
+  color:#fff;
+}
+.pros h4{
+  background-color:#397931;
+}
+.pros{
+  background-color:rgba(71,161,66,.1);
+}
+.pros li::before{
+  border-color:#ced7cd;
+  outline-color:#397931;
+}
+.cons h4{
+  background-color:#a11a19;
+}
+.cons{
+  background-color:rgba(221,36,35,.1);
+}
+.cons li::before{
+  border-color:#ddcaca;
+  outline-color:#a11a19;
+}
+.skill_array li{
+  background-color:rgba(255,255,255,.2);
+}
+.skill_array .sub_h{
+  opacity:.65;
+}
+.level{
+  background-color:transparent;
+}
+.level div{
+  background-color:rgba(32,89,204,.25);
+  border-color:#e4e4e4;
+}
