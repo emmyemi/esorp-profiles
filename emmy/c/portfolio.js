@@ -37,7 +37,7 @@ setTheme = () => {
       scriptSrc,
       scriptCheck = (x = false) => {
         var getResult = () => {
-              if (this.responseText.test(/2\d\d/)) {
+              if (check.responseText.test(/2\d\d/)) {
                 result = true;
                 scriptSrc = `${themePath}/${theme}.js`
               } else {
