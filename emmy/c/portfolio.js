@@ -37,13 +37,11 @@ setTheme = () => {
       scriptSrc = `${themePath}/${theme}.js`,
       scriptCheck = () => {
         var getResult = () => {
-              if (this.response) {
-                result = this.status.test(/2\d\d/);
-                if (result == true) {
+              console.log(`XHTTP result: ${this.status}`);
+              if (this.status == '200') {
                 let script = document.createElement('script');
-                  script.setAttribute('src', scriptSrc);
-                  document.querySelector('script[src*="portfolio.js"]').insertBefore(script);
-                }
+                script.setAttribute('src', scriptSrc);
+                document.querySelector('#h').insertBefore(script);
               }
             };
         let check = new XMLHttpRequest();
