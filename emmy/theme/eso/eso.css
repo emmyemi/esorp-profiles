@@ -12,6 +12,9 @@ a:hover, #f a:hover{
   color:#fff;
   background:none;
 }
+#h_bg{
+  display:none;
+}
 #h_title{
   background:#151511 url(i/grunge.png);
   background-image:url(../../theme/eso/i/grunge.png);
@@ -38,6 +41,9 @@ article,.image{
   background-color:rgba(21,21,17,.5);
   border:1px solid #111;
   color:#aaa;
+}
+.section_title{
+  font-size:1.4em;
 }
 #f{
   background:#151511 url(i/grunge.png);
