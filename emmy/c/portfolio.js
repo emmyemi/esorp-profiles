@@ -30,9 +30,8 @@ insFooter = () => {
     Website &copy; 2017&ndash;${new Date().getFullYear()} Emmy`;
   document.body.appendChild(footer);
 },
-setTheme = () => {
-  var theme = document.head.getAttribute('data-theme'),
-      themePath = `/emmy/theme/${theme}`,
+setTheme = (theme = document.head.getAttribute('data-theme')) => {
+  var themePath = `/emmy/theme/${theme}`,
       themeHref = `/emmy/theme/${theme}/${theme}.css`,
       style = document.createElement('link'),
       result,
