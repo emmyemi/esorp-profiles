@@ -37,14 +37,13 @@ setTheme = () => {
       scriptSrc = `${themePath}/${theme}.js`,
       scriptCheck = () => {
         var getResult = () => {
-              console.log(`XHTTP result: ${this.status}`);
               if (this.status == '200') {
                 let script = document.createElement('script');
                 script.setAttribute('src', scriptSrc);
                 document.querySelector('#h').insertBefore(script);
               }
-            };
-        let check = new XMLHttpRequest();
+            },
+            check = new XMLHttpRequest();
         check.addEventListener('load', getResult);
         check.open('GET', scriptSrc);
         check.send();
@@ -53,6 +52,7 @@ setTheme = () => {
   style.setAttribute('type', 'text/css');
   style.setAttribute('href', themeHref);
   document.head.appendChild(style);
+  scriptCheck();
 },
 // * * *
 pageLoad = () => {
