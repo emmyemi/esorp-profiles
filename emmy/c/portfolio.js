@@ -36,15 +36,13 @@ setTheme = () => {
       result,
       scriptSrc = `${themePath}/${theme}.js`,
       scriptCheck = () => {
-        var getResult = () => {
-              if (this.status == '200') {
-                let script = document.createElement('script');
-                script.setAttribute('src', scriptSrc);
-                document.querySelector('#h').insertBefore(script);
-              }
+        var insScript = () => {
+              let script = document.createElement('script');
+              script.setAttribute('src', scriptSrc);
+              document.querySelector('#h').insertBefore(script);
             },
             check = new XMLHttpRequest();
-        check.addEventListener('load', getResult);
+        check.addEventListener('load', insScript);
         check.open('GET', scriptSrc);
         check.send();
     };
