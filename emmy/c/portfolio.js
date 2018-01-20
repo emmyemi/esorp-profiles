@@ -39,7 +39,7 @@ setTheme = () => {
         var insScript = () => {
               let script = document.createElement('script');
               script.setAttribute('src', scriptSrc);
-              document.querySelector('#h').insertBefore(script);
+              document.body.insertBefore(script, document.querySelector('#h'));
             },
             check = new XMLHttpRequest();
         check.addEventListener('load', insScript);
