@@ -1,4 +1,5 @@
 var scrollElem,
+    isDOMContentLoaded,
 adjustHead = (h) => {
   h.style.height = `${window.innerHeight - 1}px`;
 },
