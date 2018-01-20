@@ -38,8 +38,8 @@ setTheme = () => {
       scriptCheck = (x = false) => {
         if (!x) {
           var getResult = () => {
-                if (this.responseText) {
-                  result = this.responseText.test(/2\d\d/);
+                if (this.response) {
+                  result = this.status.test(/2\d\d/);
                 }
                 return result;
               };
