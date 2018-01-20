@@ -35,31 +35,26 @@ setTheme = () => {
       style = document.createElement('link'),
       result,
       scriptSrc = `${themePath}/${theme}.js`,
-      scriptCheck = (x = false) => {
-        if (!x) {
-          var getResult = () => {
-                if (this.response) {
-                  result = this.status.test(/2\d\d/);
+      scriptCheck = () => {
+        var getResult = () => {
+              if (this.response) {
+                result = this.status.test(/2\d\d/);
+                if (result == true) {
+                let script = document.createElement('script');
+                  script.setAttribute('src', scriptSrc);
+                  document.querySelector('script[src*="portfolio.js"]').insertBefore(script);
                 }
-                return result;
-              };
-          let check = new XMLHttpRequest();
-          check.addEventListener('load', getResult);
-          check.open('GET', scriptSrc);
-          check.send();
-        } else {
-          let script = document.createElement('script');
-          script.setAttribute('src', scriptSrc);
-          document.body.appendChild(script);
-        }
-      };
+              }
+            };
+        let check = new XMLHttpRequest();
+        check.addEventListener('load', getResult);
+        check.open('GET', scriptSrc);
+        check.send();
+    };
   style.setAttribute('rel', 'stylesheet');
   style.setAttribute('type', 'text/css');
   style.setAttribute('href', themeHref);
   document.head.appendChild(style);
-  if (scriptCheck()) {
-    scriptCheck(true);
-  }
 },
 // * * *
 pageLoad = () => {
