@@ -58,6 +58,12 @@ article,.image{
   width:calc(.25em + 2px);
   height:calc(.25em + 2px);
 }
+.level{
+  background-color:#1a1a16;
+}
+.level div{
+  border-color:#1a1a16;
+}
 #f{
   background:#151511 url(i/grunge.png);
   background-image:url(../../theme/eso/i/grunge.png);
