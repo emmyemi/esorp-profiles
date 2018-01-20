@@ -1,3 +1,8 @@
+::-moz-selection{
+  color:#151511;
+  background-color:#eeca2a;
+  text-shadow:initial;
+}
 body{
   background:#625F4F url(i/grunge-light.png) fixed;
   background-image:url(../../theme/eso/i/grunge-light.png);
