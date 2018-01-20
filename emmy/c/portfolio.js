@@ -34,21 +34,18 @@ setTheme = () => {
       themeHref = `/emmy/theme/${theme}/${theme}.css`,
       style = document.createElement('link'),
       result,
-      scriptSrc,
+      scriptSrc = `${themePath}/${theme}.js`,
       scriptCheck = (x = false) => {
         if (!x) {
           var getResult = () => {
-                if (this.responseText.test(/2\d\d/)) {
-                  result = true;
-                  scriptSrc = `${themePath}/${theme}.js`
-                } else {
-                  result = false;
+                if (this.responseText) {
+                  result = this.responseText.test(/2\d\d/);
                 }
                 return result;
               };
           let check = new XMLHttpRequest();
           check.addEventListener('load', getResult);
-          check.open('GET', `${themePath}/${theme}.js`);
+          check.open('GET', scriptSrc);
           check.send();
         } else {
           let script = document.createElement('script');
