@@ -36,16 +36,16 @@ setTheme = () => {
       result,
       scriptSrc,
       scriptCheck = (x = false) => {
-        var getResult = () => {
-              if (check.responseText.test(/2\d\d/)) {
-                result = true;
-                scriptSrc = `${themePath}/${theme}.js`
-              } else {
-                result = false;
-              }
-              return result;
-            };
         if (!x) {
+          var getResult = () => {
+                if (this.responseText.test(/2\d\d/)) {
+                  result = true;
+                  scriptSrc = `${themePath}/${theme}.js`
+                } else {
+                  result = false;
+                }
+                return result;
+              };
           let check = new XMLHttpRequest();
           check.addEventListener('load', getResult);
           check.open('GET', `${themePath}/${theme}.js`);
