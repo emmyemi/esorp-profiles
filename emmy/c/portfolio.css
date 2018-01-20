@@ -19,7 +19,7 @@ p:first-of-type{
   position:absolute;
   height:100%;
   width:100%;
-  filter:blur(20px) saturate(3);
+  filter:blur(5px) saturate(0);
   background-color:#000;
   z-index:-1;
 }
@@ -247,13 +247,11 @@ section.wide_img{
 }
 .pros_cons h4{
   letter-spacing:.02em;
-  color:#fff;
   font-size:1.2em;
   font-weight:normal;
   text-align:center;
   margin:0 0 .25em;
   padding:.4em 0;
-  text-shadow:0 0 2px #151515;
 }
 .pros_cons ul{
   margin:1em 7.5%;
@@ -301,6 +299,19 @@ section.wide_img{
   border-color:#1a1515;
   background-color:#dd2423;
 }
+.pro,.con,.quirk{
+  border-bottom:1px solid;
+  margin-bottom:-1px;
+}
+.pro{
+  border-bottom-color:rgba(71,161,66,.6);
+}
+.con{
+  border-bottom-color:rgba(221,36,35,.6);
+}
+.quirk{
+  border-bottom-color:rgba(35,96,221,.6);
+}
 
 .skill_category{
   margin:1em 0 0;
@@ -337,7 +348,6 @@ section.wide_img{
   margin-left:0;
 }
 .skill_array li h5{
-  text-shadow:0 0 2px #121212;
   font-size:1em;
   font-weight:lighter;
   text-align:center;

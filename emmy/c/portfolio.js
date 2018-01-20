@@ -25,10 +25,45 @@ insFooter = () => {
   footer.setAttribute('id', 'f');
   footer.innerHTML =`
     Artwork: ${artCredit}<br />
-    Website &copy; 2017&ndash;${new Date().getFullYear()} Emmy
-  `;
+    Website &copy; 2017&ndash;${new Date().getFullYear()} Emmy`;
   document.body.appendChild(footer);
-}
+},
+setTheme = () => {
+  var theme = document.head.getAttribute('data-theme'),
+      themePath = `/emmy/theme/${theme}`,
+      themeHref = `/emmy/theme/${theme}/${theme}.css`,
+      style = document.createElement('link'),
+      result,
+      scriptSrc,
+      scriptCheck = (x = false) => {
+        var getResult = () => {
+              if (this.responseText.test(/2\d\d/)) {
+                result = true;
+                scriptSrc = `${themePath}/${theme}.js`
+              } else {
+                result = false;
+              }
+              return result;
+            };
+        if (!x) {
+          let check = new XMLHttpRequest();
+          check.addEventListener('load', getResult);
+          check.open('GET', `${themePath}/${theme}.js`);
+          check.send();
+        } else {
+          let script = document.createElement('script');
+          script.setAttribute('src', scriptSrc);
+          document.body.appendChild(script);
+        }
+      };
+  style.setAttribute('rel', 'stylesheet');
+  style.setAttribute('type', 'text/css');
+  style.setAttribute('href', themeHref);
+  document.head.appendChild(style);
+  if (scriptCheck()) {
+    document.head.appendChild(scriptCheck(true));
+  }
+},
 // * * *
 pageLoad = () => {
   if (document.querySelector('#h.big')) {
@@ -37,6 +72,9 @@ pageLoad = () => {
   }
   if (!document.querySelector('#h.no_banner')) {
     initParallax();
+  }
+  if (document.querySelector('head[data-theme]')) {
+    setTheme();
   }
   insFooter();
 };

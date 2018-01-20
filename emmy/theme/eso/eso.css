@@ -1,0 +1,47 @@
+body{
+  background:#625F4F url(i/grunge-light.png) fixed;
+  background-image:url(../../theme/eso/i/grunge-light.png);
+  text-shadow:0px 0px 1px rgba(0,0,0,0.75),1px 2px 1px rgba(0,0,0,0.5);
+}
+a, #f a{
+  color:#c5bf9e;
+  border:none;
+  transition:color .15s;
+}
+a:hover, #f a:hover{
+  color:#fff;
+  background:none;
+}
+#h_title{
+  background:#151511 url(i/grunge.png);
+  background-image:url(../../theme/eso/i/grunge.png);
+  border:solid #c5bf9e;
+  border-width:2px 0;
+  color:#c5bf9e;
+}
+#h_title,.section_title{
+  color:#eeca2a;
+}
+h2, h4, .pros_cons{
+  color:#ccccbd;
+}
+article,.image{
+  background-color:transparent;
+}
+.image{
+  box-shadow:none;
+}
+.img_container{
+  border:none;
+}
+.info{
+  background-color:rgba(21,21,17,.5);
+  border:1px solid #111;
+  color:#aaa;
+}
+#f{
+  background:#151511 url(i/grunge.png);
+  background-image:url(../../theme/eso/i/grunge.png);
+  border-top:1px solid #111;
+  color:#999;
+}
