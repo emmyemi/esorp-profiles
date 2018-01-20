@@ -50,6 +50,14 @@ article,.image{
 .section_title{
   font-size:1.4em;
 }
+.stat_desc{
+  background:linear-gradient(to right, rgba(0,0,0,.075), rgba(0,0,0,.15));
+}
+.pros li::before, .cons li::before{
+  border-width:1px;
+  width:calc(.25em + 2px);
+  height:calc(.25em + 2px);
+}
 #f{
   background:#151511 url(i/grunge.png);
   background-image:url(../../theme/eso/i/grunge.png);
