@@ -58,7 +58,7 @@ setTheme = () => {
   style.setAttribute('href', themeHref);
   document.head.appendChild(style);
   if (scriptCheck()) {
-    document.head.appendChild(scriptCheck(true));
+    scriptCheck(true);
   }
 },
 // * * *
