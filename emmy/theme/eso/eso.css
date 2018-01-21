@@ -70,3 +70,9 @@ article,.image{
   border-top:1px solid #111;
   color:#999;
 }
+
+@media (max-width:749px){
+  .stat_desc{
+    background:linear-gradient(to top, rgba(0,0,0,.075), rgba(0,0,0,.15));
+  }
+}
