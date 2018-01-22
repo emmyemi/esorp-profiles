@@ -62,7 +62,7 @@ pageLoad = () => {
   if (!document.querySelector('#h.no_banner')) {
     initParallax();
   }
-  if (document.querySelector('head[data-theme]')) {
+  if (document.querySelector('head[data-theme]') && document.querySelector('head[data-theme]').getAttribute('data-theme') != 'default') {
     setTheme();
   }
   insFooter();
