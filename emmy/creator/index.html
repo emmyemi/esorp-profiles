@@ -11,8 +11,7 @@
   <script src="creator.js"></script>
   <iframe seamless frameborder="0" sandbox="allow-same-origin" id="preview" srcdoc="<head></head><body style=&quot;background:black;color:white;margin:0&quot;>i am all i am</body>"></iframe>
   <div id="creator-ui">
-    <div class="creator-module creator-id-h">
-      <h1>Heading</h1>
+    <div class="creator-module creator-id--h">
       <div class="creator-module-input" title="The name of your character">
         <h2 class="creator-module-input-label">Character Name</h2>
         <input id="charname" type="text" placeholder="Character Name">
@@ -40,11 +39,21 @@
             <label for="h-size-lg">Large (Full window)</label>
             <input type="radio" name="h-options" id="h-size-lg">
           </div>
-          <div class="creator-input-container">
-            <input type="url" name="h-options" id="headurl" placeholder="Header Image URL (e.g. http://www.example.com/image.jpg">
-          </div>
         </form>
+        <input type="url" name="h-options" id="h-url" placeholder="Header Image URL (e.g. https://www.example.com/image.jpg)">
       </div>
+    </div>
+    <div class="creator-module creator-id--basic-info">
+      <h1>Basic Info</h1>
+      <form id="basic-options">
+        <div class="creator-input-container">
+          <label for="basic-art">Add artwork</label>
+          <input type="checkbox" name="basic-options" id="basic--art">
+        </div>
+        <div class="creator-input-container">
+          <input disabled type="url" name="basic-options" id="basic--art-url" placeholder="Artwork URL (e.g. https://www.example.com/image.jpg)">
+        </div>
+      </form>
     </div>
   </div>
 </body>
