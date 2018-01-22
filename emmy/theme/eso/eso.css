@@ -1,11 +1,10 @@
-::-moz-selection{
+::-moz-selection, ::selection{
   color:#151511;
   background-color:#eeca2a;
   text-shadow:initial;
 }
 body{
   background:#625F4F url(i/grunge-light.png) fixed;
-  background-image:url(../../theme/eso/i/grunge-light.png);
   text-shadow:0px 0px 1px rgba(0,0,0,0.75),1px 2px 1px rgba(0,0,0,0.5);
 }
 a, #f a{
@@ -22,7 +21,6 @@ a:hover, #f a:hover{
 }
 #h_title{
   background:#151511 url(i/grunge.png);
-  background-image:url(../../theme/eso/i/grunge.png);
   border:solid #c5bf9e;
   border-width:2px 0;
   color:#c5bf9e;
@@ -66,7 +64,6 @@ article,.image{
 }
 #f{
   background:#151511 url(i/grunge.png);
-  background-image:url(../../theme/eso/i/grunge.png);
   border-top:1px solid #111;
   color:#999;
 }
