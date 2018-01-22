@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Profile Creator (by Emmy)</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="creator.css">
+</head>
+<body>
+  <script src="creator.js"></script>
+  <iframe seamless frameborder="0" sandbox="allow-same-origin" id="preview" srcdoc="<head></head><body style=&quot;background:black;color:white;margin:0&quot;>i am all i am</body>"></iframe>
+  <div id="creator-ui">
+    <div class="creator-module creator-id-h">
+      <h1>Heading</h1>
+      <div class="creator-module-input" title="The name of your character">
+        <h2 class="creator-module-input-label">Character Name</h2>
+        <input id="charname" type="text" placeholder="Character Name">
+      </div>
+      <div class="creator-module-input" title="A short (optional) tagline">
+        <h2 class="creator-module-input-label">Tagline</h2>
+        <input id="tagline" type="text" placeholder="Tagline (optional)">
+      </div>
+      <div class="creator-module-input" title="An image to use as the header">
+        <h2 class="creator-module-input-label">Header image</h2>
+        <form id="h-options">
+          <div class="creator-input-container">
+            <label for="h-size-no">No header</label>
+            <input type="radio" name="h-options" id="h-size-no">
+          </div>
+          <div class="creator-input-container">
+            <label for="h-size-sm">Small (300px)</label>
+            <input type="radio" name="h-options" id="h-size-sm">
+          </div>
+          <div class="creator-input-container">
+            <label for="h-size-m">Normal (500px)</label>
+            <input type="radio" name="h-options" id="h-size-m" checked>
+          </div>
+          <div class="creator-input-container">
+            <label for="h-size-lg">Large (Full window)</label>
+            <input type="radio" name="h-options" id="h-size-lg">
+          </div>
+          <div class="creator-input-container">
+            <input type="url" name="h-options" id="headurl" placeholder="Header Image URL (e.g. http://www.example.com/image.jpg">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
