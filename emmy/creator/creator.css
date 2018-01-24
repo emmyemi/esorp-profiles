@@ -48,10 +48,10 @@ input[type="url"]:invalid{
   box-shadow:none;
 }
 .creator--hidden,
-[class*="creator--"][class$="-hidden"] input,
-[class*="creator--"][class$="-hidden"] select,
-[class*="creator--"][class$="-hidden"] .creator--dropdown-select,
-[class*="creator--"][class$="-hidden"] img{
+[class*="creator--"][class*="-hidden"] input,
+[class*="creator--"][class*="-hidden"] select,
+[class*="creator--"][class*="-hidden"] .creator--dropdown-select,
+[class*="creator--"][class*="-hidden"] img{
   display:none!important;
 }
 .creator--disabled{
@@ -71,8 +71,10 @@ input[type="url"]:invalid{
   display:block;
   text-align:center;
 }
-.creator--artist-info > :nth-child(2){
-  margin-left:.25em;
+.creator--addremove-pair{
+  width:100%;
+  text-align:center;
+  cursor:default;
 }
 .creator--dropdown-select input[type="text"],
 .creator--dropdown-select input[type="url"]{
@@ -96,6 +98,10 @@ input[type="url"]:invalid{
 }
 .creator--dropdown-select select{
   flex:1;
+}
+.info .creator--dropdown-select{
+  width:50%;
+  margin:auto;
 }
 [contenteditable]{
   outline:1px solid transparent;

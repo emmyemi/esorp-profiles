@@ -1,7 +1,7 @@
 var thisSection,
 thisModule,
 addRemove = (el) => {
-  var dataSection = el.getAttribute('data-section');
+  var dataSection = el.getAttribute('data-section') || el.parentElement.getAttribute('data-section');
   thisSection = dataSection;
   // make sure not to toggle class for add/remove pairs
   if (!el.parentElement.classList.contains('creator--addremove-pair')) {
@@ -28,10 +28,11 @@ addRemove = (el) => {
     if (!el.classList.contains('del')) {
       let newSection = document.createElement('section');
       setAttributes(newSection, {
-        'data-section':`${creator.section.list.length.toString()}`
+        'data-section':creator.section.id
       });
       newSection.innerHTML = creator.section.template();
       document.querySelector('article').insertBefore(newSection, el.parentElement);
+      creator.section.id++;
     } else {
       let delSection = creator.section.list[creator.section.list.length - 1];
       delSection.remove();
@@ -43,16 +44,69 @@ addRemove = (el) => {
       document.querySelector('.creator--add-remove--section.del').classList.add('creator--disabled');
     }
   }
+  // add/remove module
+  if (el.classList.contains('creator--add-remove--module')) {
+    if (!el.classList.contains('del')) {
+      let selEl = document.createElement('div'),
+      createModule = (el) => {
+        creator.modules.refresh();
+        let getValue = (el) => {
+          return el.querySelector('select').value;
+        } 
+        window['creator']['modules'][`${getValue(selEl)}`].create(selEl, dataSection);
+        if (document.querySelector(`[data-section="${dataSection}"`).querySelectorAll('.info > [data-module-id]').length != 0) {
+          document.querySelector(`[data-section="${dataSection}"`).querySelector('.info .creator--add-remove--module.del').classList.remove('creator--disabled');
+        }
+        creator.modules.refresh();
+        creator.modules.id++;
+      };
+      setAttributes(selEl, {
+        'data-section':dataSection,
+        'class':`creator--dropdown-select`,
+      });
+      selEl.innerHTML = `<select><option value="null" disabled selected>Select a module type</option>${creator.modules.generateOptions()}</select>`;
+      document.querySelector(`[data-section="${dataSection}"`).querySelector('.info').insertBefore(selEl, el.parentElement);
+      selEl.onchange = () => { createModule(selEl); };
+    } else {
+      let sectModules = document.querySelector(`[data-section="${dataSection}"`).querySelectorAll('.info > [data-module-id]'),
+      lastModule = sectModules[sectModules.length - 1];
+      lastModule.remove();
+      if ((sectModules.length - 1) == 0) {
+        document.querySelector(`[data-section="${dataSection}"`).querySelector('.info .creator--add-remove--module.del').classList.add('creator--disabled');
+      }
+      creator.modules.refresh();
+    }
+  }
   // add/remove table row/column
   if (el.classList.contains('creator--add-remove--row') || el.classList.contains('creator--add-remove--col')) {
-    let tableId = parseInt(el.parentElement.getAttribute('data-table-id')),
-    thisTable = creator.modules.table.list[tableId],
-    dataCols = () => { return parseInt(thisTable.getAttribute('data-cols')); },
-    dataRows = () => { return parseInt(thisTable.getAttribute('data-rows')); },
+    let tableId = parseInt(el.parentElement.getAttribute('data-module-id')),
+    thisTable = document.querySelector(`[data-module-id="${tableId}"`),
+    ifFirstTable = () => {
+      if (tableId == -1) {
+        return ''
+      } else {
+        return 'creator--md'
+      }
+    }
+    dataCols = () => { return (thisTable.querySelectorAll('td').length - 1) / (thisTable.querySelectorAll('tr').length - 1) },
+    dataRows = () => { return thisTable.querySelectorAll('tr').length - 1 },
     insRow = (n) => {
       let nx = '';
       for (var i = 0; i < n; i++) {
-        nx += `<td contenteditable="true">${`New cell ${i + 1}`}</td>`;
+        nx += `<td contenteditable="true" class="${ifFirstTable()}">New cell</td>`;
+      }
+      return nx;
+    },
+    insCol = (n) => {
+      let nx = [];
+      for (var i = 0; i < dataRows(); i++) {
+        let td = document.createElement('td');
+        setAttributes(td, {
+          'contenteditable':'true',
+          'class':ifFirstTable()
+      });
+        td.innerHTML = `New cell ${i + 1}`;
+        nx.push(td);
       }
       return nx;
     }
@@ -65,15 +119,38 @@ addRemove = (el) => {
         let delRow = thisTable.querySelectorAll('tr')[dataRows() - 1];
         delRow.remove();
       }
-      thisTable.setAttribute('data-rows', (thisTable.querySelectorAll('tr').length - 1));
-      if (dataRows() == 0 && !thisTable.querySelector('.creator--disabled')) {
-        thisTable.querySelector('[class*="creator--add-remove"][class*="del"]').classList.add('creator--disabled');
-      } else if (dataRows() != 0 && thisTable.querySelector('.creator--disabled')) {
-        thisTable.querySelector('.creator--disabled').classList.remove('creator--disabled');
+      if (dataRows() <= 1) {
+        thisTable.querySelector('.del.creator--add-remove--row').classList.add('creator--disabled');
+      } else if (dataRows() > 1 && thisTable.querySelector('.del.creator--add-remove--row.creator--disabled')) {
+        thisTable.querySelector('.del.creator--add-remove--row.creator--disabled').classList.remove('creator--disabled');
       }
     } else {
-      // adding columns sooooon(TM)
+      if (!el.classList.contains('del')) {
+        let newCols = insCol(dataRows()),
+        rows = thisTable.querySelectorAll('tr'),
+        insNewCols = (element, index, array) => {
+          if (index < (dataRows())) {
+          element.appendChild(newCols[index]);
+          }
+        }
+        rows.forEach(insNewCols);
+      } else {
+        let delCol = thisTable.querySelectorAll(`td:nth-child(${dataCols()})`),
+        deleteTd = (element, index, array) => {
+          element.remove();
+        }
+        delCol.forEach(deleteTd);
+      }
+      if (dataCols() <= 1) {
+        thisTable.querySelector('.del.creator--add-remove--col').classList.add('creator--disabled');
+      } else if (dataCols() > 1 && thisTable.querySelector('.del.creator--add-remove--col.creator--disabled')) {
+        thisTable.querySelector('.del.creator--add-remove--col.creator--disabled').classList.remove('creator--disabled');
+      }
     }
+    setAttributes(thisTable, {
+      'data-rows':dataRows(),
+      'data-cols':dataCols()
+    });
   }
 },
 setAttributes = (el, attr) => {
@@ -103,9 +180,7 @@ creator = {
           }
         }
       };
-      themeSel.onchange = () => {
-        checkDef(themeSel);
-      }
+      themeSel.onchange = () => { checkDef(themeSel); }
     }
   },
   head:{
@@ -136,12 +211,13 @@ creator = {
   },
   section:{
     list:undefined,
+    id:1,
     refresh:() => {
       creator.section.list = document.querySelectorAll('section');
     },
     template:() => {
       creator.section.refresh();
-      return `<div class="image creator--img-hidden"><div class="img_container"><img src="" class="creator--img-el" alt="img_${creator.section.list.length}" /></div><div class="creator--image-options"><input data-section="${creator.section.list.length}" type="url" pattern=".+\.[A-Za-z]{3,4}$" class="creator--img-src" placeholder="Image URL"><div class="creator--dropdown-select"><label for="image-type--${creator.section.list.length}">Shape:</label><select class="creator--image-type" id="image-type--${creator.section.list.length}" data-section="${creator.section.list.length}"><option value="tall" selected>Tall</option><option value="circle">Circle</option><option value="diamond">Diamond</option><option value="square">Square</option><option value="wide">Wide</option></select></div><div class="creator--artist-info"><input type="text" placeholder="Artist name"><input type="url" placeholder="Link to artist profile"></div><a class="creator--add-remove--image" data-section="${creator.section.list.length}">Image</a></div></div><div class="info"><h3 class="section_title" contenteditable="true">Section Title</h3><div class="creator--addremove-pair"><a class="creator--add-remove--module">Module</a> / <a class="creator--add-remove--module del creator--disabled">Module</a></div></div>`
+      return `<div class="image creator--img-hidden"><div class="img_container"><img src="" class="creator--img-el" alt="img_${creator.section.id}" /></div><div class="creator--image-options"><input data-section="${creator.section.id}" type="url" pattern=".+\\.[A-Za-z]{3,4}$" class="creator--img-src" placeholder="Image URL"><div class="creator--dropdown-select"><label for="image-type--${creator.section.id}">Shape:</label><select class="creator--image-type" id="image-type--${creator.section.id}" data-section="${creator.section.id}"><option value="tall" selected>Tall</option><option value="circle">Circle</option><option value="diamond">Diamond</option><option value="square">Square</option><option value="wide">Wide</option></select></div><div class="creator--artist-info"><input type="text" placeholder="Artist name"><input type="url" placeholder="Link to artist profile"></div><a class="creator--add-remove--image" data-section="${creator.section.id}">Image</a></div></div><div class="info"><h3 class="section_title" contenteditable="true">Section Title</h3><div class="creator--addremove-pair" data-section="${creator.section.id}"><a class="creator--add-remove--module">Module</a> / <a class="creator--add-remove--module del creator--disabled">Module</a></div></div>`
     }
   },
   img:{
@@ -173,8 +249,8 @@ creator = {
           let currentSection = element.getAttribute('id').split('--')[1],
           removeAll = (el) => {
             el.classList.remove('diamond', 'circle', 'square');
-          }
-          element.onchange = () => {
+          },
+          changeImg = () => {
             let section = document.querySelector(`[data-section="${currentSection}"`);
             if (element.value == 'wide') {
               removeAll(section.querySelector('.image'));
@@ -188,6 +264,9 @@ creator = {
               section.querySelector('.image').classList.add(element.value);
             }
           }
+          element.onchange = () => {
+            changeImg();
+          }
         }
         creator.img.shape.list = elList;
         elList.forEach(doTether);
@@ -199,25 +278,81 @@ creator = {
     }
   },
   modules:{
+    list:undefined,
+    id:0,
+    p:{
+      list:undefined,
+      refresh:() => {
+        creator.modules.p.list = document.querySelectorAll('p[data-module-id]');
+      },
+      create:(src, sect) => {
+        creator.modules.p.refresh();
+        let newP = document.createElement('p');
+        pList = creator.modules.p.list;
+        setAttributes(newP, {
+          'data-module-id':creator.modules.id,
+          'class':'creator--md',
+          'contenteditable':'true'
+        });
+        newP.innerHTML = 'New paragraph! Start writing&hellip;';
+        document.querySelector(`[data-section="${sect}"]`).querySelector('.info').replaceChild(newP, src);
+        creator.modules.p.refresh();
+      }
+    },
     table:{
       list:undefined,
       refresh:() => {
-        let elList = document.querySelectorAll('table');
-        creator.modules.table.list = elList;
+        creator.modules.table.list = document.querySelectorAll('table');
       },
-      create:(src) => {
+      create:(src, sect) => {
         creator.modules.table.refresh();
         let newTable = document.createElement('table'),
         tableList = creator.modules.table.list;
         setAttributes(newTable, {
-          'data-table-id': tableList.length - 1,
-          'data-table-cols': '2',
-          'data-table-rows': '2'
+          'data-module-id':creator.modules.id,
+          'data-cols':'2',
+          'data-rows':'2'
         });
+        newTable.innerHTML = `<tbody><tr><td contenteditable="true" class="creator--md">Cell A1</td><td contenteditable="true" class="creator--md">Cell A2</td></tr><tr><td contenteditable="true" class="creator--md">Cell B1</td><td contenteditable="true" class="creator--md">Cell B2</td></tr><tr><td class="creator--addremove-pair" data-module-id="${creator.modules.id}"><a class="creator--add-remove--row">Row</a> / <a class="creator--add-remove--col">Column</a><br /><a class="creator--add-remove--row del">Row</a> / <a class="creator--add-remove--col del">Column</a></td></tr></tbody>`
+        document.querySelector(`[data-section="${sect}"]`).querySelector('.info').replaceChild(newTable, src);
+        creator.modules.table.refresh();
+        creator.addRemove.refresh();
       }
     },
+    prosCons:{
+      list:undefined
+    },
+    skills:{
+      list:undefined
+    },
+    html:{
+      list:undefined
+    },
+    style:{
+      list:undefined
+    },
+    script:{
+      list:undefined
+    },
     refresh:() => {
+      creator.modules.p.refresh();
       creator.modules.table.refresh();
+    },
+    generateOptions:() => {
+      let optArr = [
+        'p','Paragraph',
+        'table','Table',
+        'prosCons','Pros &amp; Cons',
+        'skills','Skills',
+        'html','HTML',
+        'style','Style (CSS)',
+        'script','Script (JavaScript)'
+      ],
+      options = '';
+      for (i = 0; i < optArr.length; i+=2) {
+        options += `<option value="${optArr[i]}">${optArr[i + 1]}</option>`;
+      }
+      return options;
     }
   },
   refresh:() => {
