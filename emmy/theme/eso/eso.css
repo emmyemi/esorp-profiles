@@ -30,6 +30,9 @@ a:hover, #f a:hover{
 #h_title,.section_title{
   color:#eeca2a;
 }
+#h.big{
+  height:calc(100vh - 2px);
+}
 h2, h4, .pros_cons{
   color:#ccccbd;
 }

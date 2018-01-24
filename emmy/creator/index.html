@@ -1,60 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Profile Creator (by Emmy)</title>
+  <title>Profile Creator</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="../c/portfolio.css">
   <link rel="stylesheet" type="text/css" href="creator.css">
+  <style id="head-img-style">#h_bg,#h_separator{background-image:url('');}</style>
 </head>
 <body>
+  <script src="../c/portfolio.js"></script>
   <script src="creator.js"></script>
-  <iframe seamless frameborder="0" sandbox="allow-same-origin" id="preview" srcdoc="<head></head><body style=&quot;background:black;color:white;margin:0&quot;>i am all i am</body>"></iframe>
-  <div id="creator-ui">
-    <div class="creator-module creator-id--h">
-      <div class="creator-module-input" title="The name of your character">
-        <h2 class="creator-module-input-label">Character Name</h2>
-        <input id="charname" type="text" placeholder="Character Name">
+  <div id="top-options" data-section="-1" class="creator--top-options">
+    <div id="creator--theme-select" class="creator--dropdown-select">
+      <label for="theme-select">Theme:</label>
+      <select id="theme-select">
+        <optgroup label="My themes">
+          <option value="default" selected>Default</option>
+          <option value="light">Light</option>
+          <option value="eso">ESO</option>
+        </optgroup>
+        <optgroup label="Community themes">
+        </optgroup>
+      </select>
+    </div>
+    <div id="head-img-options" class="creator--hidden">
+      <input data-section="-1" type="url" name="header-image-url" id="head-img-url" placeholder="Header Image URL (e.g. https://example.com/image.jpg)" pattern=".+\.[A-Za-z]{3,4}$">
+      <div id="head-height-select" class="creator--dropdown-select">
+        <label for="head-height-select">Header height:</label>
+        <select id="creator--head-height-select">
+          <option value="sm">Small (300px)</option>
+          <option value="m" selected>Default (500px)</option>
+          <option value="big">Large (window height)</option>
+        </select>
       </div>
-      <div class="creator-module-input" title="A short (optional) tagline">
-        <h2 class="creator-module-input-label">Tagline</h2>
-        <input id="tagline" type="text" placeholder="Tagline (optional)">
-      </div>
-      <div class="creator-module-input" title="An image to use as the header">
-        <h2 class="creator-module-input-label">Header image</h2>
-        <form id="h-options">
-          <div class="creator-input-container">
-            <label for="h-size-no">No header</label>
-            <input type="radio" name="h-options" id="h-size-no">
-          </div>
-          <div class="creator-input-container">
-            <label for="h-size-sm">Small (300px)</label>
-            <input type="radio" name="h-options" id="h-size-sm">
-          </div>
-          <div class="creator-input-container">
-            <label for="h-size-m">Normal (500px)</label>
-            <input type="radio" name="h-options" id="h-size-m" checked>
-          </div>
-          <div class="creator-input-container">
-            <label for="h-size-lg">Large (Full window)</label>
-            <input type="radio" name="h-options" id="h-size-lg">
-          </div>
-        </form>
-        <input type="url" name="h-options" id="h-url" placeholder="Header Image URL (e.g. https://www.example.com/image.jpg)">
+      <div class="creator--artist-info">
+        <input type="text" placeholder="Artist name">
+        <input type="url" placeholder="Link to artist profile">
       </div>
     </div>
-    <div class="creator-module creator-id--basic-info">
-      <h1>Basic Info</h1>
-      <form id="basic-options">
-        <div class="creator-input-container">
-          <label for="basic-art">Add artwork</label>
-          <input type="checkbox" name="basic-options" id="basic--art">
-        </div>
-        <div class="creator-input-container">
-          <input disabled type="url" name="basic-options" id="basic--art-url" placeholder="Artwork URL (e.g. https://www.example.com/image.jpg)">
-        </div>
-      </form>
-    </div>
+    <a class="creator--add-remove--image" data-section="-1">Header Image</a>
   </div>
-</body>
+  <div id="h" class="no_banner">
+      <div id="h_bg"></div>
+      <div id="h_separator"></div>
+      <div id="h_title">
+        <h1 contenteditable="true">Character Name</h1>
+        <h2 contenteditable="true" class="creator--md">Tagline / Quote (optional)</h2>
+      </div>
+    </div>
+    <article>
+      <!--basics-->
+      <section id="basics" data-section="0">
+        <div class="image creator--img-hidden"><div class="img_container"><img src="" class="creator--img-el" alt="img_0" /></div>
+        <div class="creator--image-options">
+          <input data-section="0" type="url" pattern=".+\.[A-Za-z]{3,4}$" class="creator--img-src" placeholder="Image URL">
+          <div class="creator--dropdown-select">
+            <label for="image-type--0">Shape:</label>
+            <select class="creator--image-type" id="image-type--0" data-section="0">
+              <option value="tall" selected>Tall</option>
+              <option value="circle">Circle</option>
+              <option value="diamond">Diamond</option>
+              <option value="square">Square</option>
+              <option value="wide">Wide</option>
+            </select>
+          </div>
+          <div class="creator--artist-info">
+            <input type="text" placeholder="Artist name">
+            <input type="url" placeholder="Link to artist profile">
+          </div>
+          <a class="creator--add-remove--image" data-section="0">Image</a></div>
+        </div>
+        <div class="info">
+          <h3 class="section_title">Basic Info</h3>
+          <div id="stats">
+            <div class="stat_desc"><p class="justify creator--md" contenteditable="true">
+              A short description of your character goes here.<br /><br />Make it the best thing ever.<br /><br />Or make it total sh*t, I don&rsquo;t care, lmao.
+            </p></div>
+            <div class="stat_chart">
+              <table data-table-id="0" data-rows="3" data-cols="2">
+                <tr>
+                  <td contenteditable="true">Race:</td>
+                  <td contenteditable="true">Altmer</td>
+                </tr>
+                <tr>
+                  <td contenteditable="true">Sex:</td>
+                  <td contenteditable="true">Male</td>
+                </tr>
+                <tr>
+                  <td contenteditable="true">Age:</td>
+                  <td contenteditable="true">100</td>
+                </tr>
+                <tr>
+                  <td class="creator--addremove-pair" style="text-align:center;" colspan="2" data-table-id="0"><a class="creator--add-remove--row">Row</a> / <a class="creator--add-remove--row del">Row</a></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div id="creator--add-remove--f" class="creator--section-edit creator--addremove-pair">
+        <a class="creator--add-remove--section">Section</a> / <a class="creator--add-remove--section del creator--disabled">Section</a>
+      </div>
+      <!--more sections-->
+    </article>
+  </body>
 </html>
