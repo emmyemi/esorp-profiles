@@ -45,6 +45,10 @@ article,.image{
 .img_container{
   border:none;
 }
+.wide_img .image img,
+:not(.diamond):not(.circle):not(.square) > .img_container > img{
+  filter:drop-shadow(1px 2px rgba(21,21,17,.5));
+}
 .info{
   background-color:rgba(21,21,17,.5);
   border:1px solid #111;
