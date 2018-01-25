@@ -47,7 +47,7 @@ article,.image{
 }
 .wide_img .image img,
 :not(.diamond):not(.circle):not(.square) > .img_container > img{
-  filter:drop-shadow(1px 2px rgba(21,21,17,.5));
+  filter:drop-shadow(1px 2px rgba(21,21,17,.25));
 }
 .info{
   background-color:rgba(21,21,17,.5);
