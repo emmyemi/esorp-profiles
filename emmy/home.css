@@ -4,8 +4,7 @@ h1{
   padding:.25em 0;
 }
 a[href="#"]{
-  opacity:.2;
-  pointer-events:none;
+  display:none;
 }
 .w{
   background-size:cover;
