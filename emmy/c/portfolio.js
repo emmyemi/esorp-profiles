@@ -1,9 +1,5 @@
 var scrollElem,
     isDOMContentLoaded,
-adjustHead = () => {
-  let h = document.querySelector('#h.big');
-  h.style.height = `${window.innerHeight - 1}px`;
-},
 doParallax = () => {
   scrollElem[0].style.backgroundPosition = `center calc(100% - ${window.scrollY * .2}px)`;
   scrollElem[1].style.backgroundPosition = `center calc(100% - ${window.scrollY * .2}px)`;
@@ -14,19 +10,32 @@ initParallax = () => {
 },
 insFooter = () => {
   var footer = document.createElement('div'),
-      artists = document.head.getAttribute('data-art').split(', '),
-      artCredit = '',
+      artists,
+      artCredit = 'Artwork: ',
+      isArtCredit = false,
       artFunc = () => {
-        let artNum = artists.length / 2;
-        for (i = 0; i < artNum; i++) {
-          artCredit += `, <a href="${artists[(i * 2) + 1]}">${artists[i * 2]}</a>`;
+        if (isArtCredit) {
+          let artNum = artists.length / 2;
+          for (i = 0; i < artNum; i++) {
+            if (i == 0) {
+              artCredit += `<a href="${artists[(i * 2) + 1]}">${artists[i * 2]}</a>`;
+            } else {
+              artCredit += `, <a href="${artists[(i * 2) + 1]}">${artists[i * 2]}</a>`;
+            }
+          }
+          return artCredit;
+        } else {
+          return '';
         }
-        artCredit = artCredit.substr(2);
       };
-  artFunc();
+  if (document.head.getAttribute('data-art')) {
+    artists = document.head.getAttribute('data-art').split(', ');
+    artFunc();
+    isArtCredit = true;
+  }
   footer.setAttribute('id', 'f');
   footer.innerHTML =`
-    Artwork: ${artCredit}<br />
+    ${artFunc()}
     Website &copy; 2017&ndash;${new Date().getFullYear()} Emmy`;
   document.body.appendChild(footer);
 },
@@ -55,17 +64,11 @@ setTheme = (theme = document.head.getAttribute('data-theme')) => {
 },
 // * * *
 pageLoad = () => {
-  if (document.querySelector('#h.big')) {
-    adjustHead();
-    window.addEventListener('resize', adjustHead);
-  }
-  if (!document.querySelector('#h.no_banner')) {
-    initParallax();
-  }
-  if (document.querySelector('head[data-theme]') && document.querySelector('head[data-theme]').getAttribute('data-theme') != 'default') {
+  if (document.querySelector('head[data-theme]') != null) {
     setTheme();
   }
   insFooter();
+  initParallax();
 };
 // * * *
 window.addEventListener('DOMContentLoaded', pageLoad);
