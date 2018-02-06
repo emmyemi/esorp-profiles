@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Profile Creator</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="../c/portfolio.css">
+  <link rel="stylesheet" type="text/css" href="creator.css">
+  <style id="head-img-style">#h_bg,#h_separator{background-image:url('');}</style>
+</head>
+<body>
+  <script src="../c/portfolio.js"></script>
+  <script src="creator.js"></script>
+  <div id="top-options" data-section="-1" class="creator--top-options">
+    <div id="creator--theme-select" class="creator--dropdown-select">
+      <label for="theme-select">Theme:</label>
+      <select id="theme-select">
+        <optgroup label="My themes">
+          <option value="default" selected>Default</option>
+          <option value="light">Light</option>
+          <option value="eso">ESO</option>
+        </optgroup>
+        <optgroup label="Community themes">
+        </optgroup>
+      </select>
+    </div>
+    <div id="head-img-options" class="creator--hidden">
+      <input data-section="-1" type="url" name="header-image-url" id="head-img-url" placeholder="Header Image URL (e.g. https://example.com/image.jpg)" pattern=".+\.[A-Za-z]{3,4}$">
+      <div id="head-height-select" class="creator--dropdown-select">
+        <label for="head-height-select">Header height:</label>
+        <select id="creator--head-height-select">
+          <option value="sm">Small (300px)</option>
+          <option value="m" selected>Default (500px)</option>
+          <option value="big">Large (window height)</option>
+        </select>
+      </div>
+      <div class="creator--artist-info">
+        <input type="text" placeholder="Artist name">
+        <input type="url" placeholder="Link to artist profile">
+      </div>
+    </div>
+    <a class="creator--add-remove--image" data-section="-1">Header Image</a>
+  </div>
+  <div id="h" class="no_banner">
+      <div id="h_bg"></div>
+      <div id="h_separator"></div>
+      <div id="h_title">
+        <h1 contenteditable="true">Character Name</h1>
+        <h2 contenteditable="true" class="creator--md">Tagline / Quote (optional)</h2>
+      </div>
+    </div>
+    <article>
+      <!--basics-->
+      <section id="basics" data-section="0">
+        <div class="image creator--img-hidden"><div class="img_container"><img src="" class="creator--img-el" alt="img_0" /></div>
+        <div class="creator--image-options">
+          <input data-section="0" type="url" pattern=".+\.[A-Za-z]{3,4}$" class="creator--img-src" placeholder="Image URL">
+          <div class="creator--dropdown-select">
+            <label for="image-type--0">Shape:</label>
+            <select class="creator--image-type" id="image-type--0" data-section="0">
+              <option value="m" selected>Tall</option>
+              <option value="circle">Circle</option>
+              <option value="diamond">Diamond</option>
+              <option value="square">Square</option>
+              <option value="wide">Wide</option>
+            </select>
+          </div>
+          <div class="creator--artist-info">
+            <input type="text" placeholder="Artist name">
+            <input type="url" placeholder="Link to artist profile">
+          </div>
+          <a class="creator--add-remove--image" data-section="0">Image</a></div>
+        </div>
+        <div class="info">
+          <h3 class="section_title">Basic Info</h3>
+          <div id="stats">
+            <div class="stat_desc"><p class="justify creator--md" contenteditable="true">
+              A short description of your character goes here.<br /><br />Make it the best thing ever.<br /><br />Or make it total sh*t, I don&rsquo;t care, lmao.
+            </p></div>
+            <div class="stat_chart">
+              <table data-module-id="-1" data-rows="3" data-cols="2">
+                <tr>
+                  <td contenteditable="true">Race:</td>
+                  <td contenteditable="true">Altmer</td>
+                </tr>
+                <tr>
+                  <td contenteditable="true">Sex:</td>
+                  <td contenteditable="true">Male</td>
+                </tr>
+                <tr>
+                  <td contenteditable="true">Age:</td>
+                  <td contenteditable="true">100</td>
+                </tr>
+                <tr>
+                  <td class="creator--addremove-pair" style="text-align:center;" data-module-id="-1"><a class="creator--add-remove--row">Row</a> / <a class="creator--add-remove--row del">Row</a></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="creator--addremove-pair" data-section="0">
+            <a class="creator--add-remove--module">Module</a> / <a class="creator--add-remove--module del creator--disabled">Module</a>
+          </div>
+        </div>
+      </section>
+      <div id="creator--add-remove--f" class="creator--section-edit creator--addremove-pair">
+        <a class="creator--add-remove--section">Section</a> / <a class="creator--add-remove--section del creator--disabled">Section</a>
+      </div>
+      <!--more sections-->
+    </article>
+  </body>
+</html>

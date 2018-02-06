@@ -1,0 +1,157 @@
+#top-options{
+  position:absolute;
+  width:35%;
+  padding:.5em;
+  background-color:rgba(0,0,0,.8);
+  border:solid rgba(0,0,0,.75);
+  border-width:0 1px 1px 0;
+  color:#fff!important;
+  text-align:center;
+}
+#top-options a:not(.del){
+  color:#fff!important;
+}
+select{
+  background-color:transparent;
+  border:none;
+  color:inherit;
+}
+label{
+  font-size:14px;
+}
+input{
+  cursor:pointer;
+}
+input[type="text"],
+input[type="url"]{
+  background:transparent;
+  border:none;
+  border-bottom:1px solid rgba(128,128,128,.5);
+  color:inherit;
+  width:100%;
+  transition-property:border-color, background-color;
+  transition-duration:.1s;
+  text-overflow: clip;
+  height: auto;
+}
+input[type="text"]:hover,
+input[type="url"]:hover,
+input[type="text"]:focus,
+input[type="url"]:focus{
+  border-bottom-color:currentColor;
+  background-color:rgba(128,128,128,.1);
+}
+input[type="url"]:invalid{
+  color:rgb(255,80,80);
+  border-bottom-color:currentColor;
+  background-color:rgba(255,100,100,.05);
+  box-shadow:none;
+}
+.creator--hidden,
+[class*="creator--"][class*="-hidden"] input,
+[class*="creator--"][class*="-hidden"] select,
+[class*="creator--"][class*="-hidden"] .creator--dropdown-select,
+[class*="creator--"][class*="-hidden"] img{
+  display:none!important;
+}
+.creator--disabled{
+  pointer-events:none;
+  opacity:.5!important;
+}
+.creator--image-options{
+  padding:0 1em;
+}
+.creator--artist-info{
+  display:flex;
+}
+.creator--artist-info > *{
+  flex:1;
+}
+.creator--add-remove--image{
+  display:block;
+  text-align:center;
+}
+.creator--addremove-pair{
+  width:100%;
+  text-align:center;
+  cursor:default;
+}
+.creator--dropdown-select input[type="text"],
+.creator--dropdown-select input[type="url"]{
+  padding:0 .5em;
+  width:100%;
+}
+.creator--dropdown-select{
+  display:flex;
+  align-items:baseline;
+  border-bottom:1px solid rgba(128,128,128,.5);
+  transition-property:border-color, background-color;
+  transition-duration:.1s;
+  cursor:pointer;
+}
+.creator--dropdown-select:hover{
+  border-bottom-color:currentColor;
+  background-color:rgba(128,128,128,.1);
+}
+.creator--dropdown-select *{
+  cursor:pointer;
+}
+.creator--dropdown-select select{
+  flex:1;
+}
+.info .creator--dropdown-select{
+  width:50%;
+  margin:auto;
+}
+[contenteditable]{
+  outline:1px solid transparent;
+}
+[contenteditable]:not(:focus){
+  cursor:pointer;
+  transition-property:background-color, outline;
+  transition-duration:.1s;
+}
+[contenteditable]:hover{
+  outline:1px solid rgba(32,89,204,.65);
+  background-color:rgba(32,89,204,.05);
+}
+[contenteditable]:focus{
+  outline:1px solid rgba(32,89,204,.75);
+  background-color:rgba(32,89,204,.1);
+}
+.creator--md[contenteditable]:hover{
+  outline:1px solid rgba(138,64,252,.65);
+  background-color:rgba(138,64,252,.05);
+}
+.creator--md[contenteditable]:focus{
+  outline:1px solid rgba(138,64,252,.75);
+  background-color:rgba(138,64,252,.1);
+}
+a[class^="creator--"]{
+  cursor:pointer;
+}
+a.del[class^="creator--"]{
+  color:rgb(255,75,75)!important;
+  border-bottom-color:rgba(255,90,90,.5);
+}
+a.del[class^="creator--"]:hover{
+  border-bottom-color:currentColor;
+  background-color:rgba(255,100,100,.075)!important;
+}
+[class*="add-remove"],
+[class*="addremove"]{
+  font-weight:normal!important;
+}
+[class*="add-remove"]:before{
+  content:'Add ';
+}
+.del[class*="add-remove"]:before{
+  content:'Remove ';
+}
+.creator--section-edit{
+  font-size:18px!important;
+}
+#creator--add-remove--f{
+  text-align:center;
+  padding:.75em 0;
+}
