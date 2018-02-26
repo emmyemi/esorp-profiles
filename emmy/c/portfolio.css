@@ -165,7 +165,8 @@ section.wide_img{
 section:nth-child(even) .info{
   border-width:1px 1px 1px 0;
 }
-section.no_img .info {
+section.no_img .info,
+section.wide_img .info{
   border-width:1px 0;
 }
 .section_title{
